@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+var screen_size
+
 func _ready():
 	pass
 

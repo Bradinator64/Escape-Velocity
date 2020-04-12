@@ -15,3 +15,7 @@ func _on_QuitButton_pressed():
 
 func _on_OptionsButton_pressed():
 	get_tree().change_scene("res://scenes/menus/RebindMenu.tscn")
+
+
+func _on_NewGameButton_pressed():
+	get_tree().change_scene("res://scenes/game/Level.tscn")

@@ -16,5 +16,5 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 
 func _on_Asteroid_area_entered(area):
-	if area.is_in_group("shot"):
+	if area.is_in_group("shot") or area.is_in_group("player"):
 		queue_free()
