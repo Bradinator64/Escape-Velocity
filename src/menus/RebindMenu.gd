@@ -43,11 +43,8 @@ func _change_key(new_key):
 	_set_keys()
 
 
-
-
 func b_change_key_player_up():
 	_mark_button("player_up")
-
 
 
 func b_change_key_player_down():
