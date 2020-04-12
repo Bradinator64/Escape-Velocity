@@ -20,6 +20,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
+max_health = 10
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )

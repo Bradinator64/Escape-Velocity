@@ -3,6 +3,7 @@ extends Area2D
 export var speed = 400
 var screen_size
 var can_shoot = true
+export var max_health = 100
 
 var shot_scene = preload("res://scenes/game/Shot.tscn")
 

@@ -14,3 +14,9 @@ func _process(delta):
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
 	#print("Queue Free")
+
+
+
+func _on_Asteroid_area_entered(area):
+	if area.is_in_group("shot"):
+		queue_free()
