@@ -2,8 +2,9 @@ extends Area2D
 
 export var speed = 400
 var screen_size
+var can_shoot = true
 
-
+var shot_scene = preload("res://scenes/game/Shot.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -41,3 +42,12 @@ func _process(delta):
 		#else:
 			#$AnimatedSprite.animation = "down"
 			
+	if Input.is_action_pressed("player_fire") and can_shoot:
+		var shot_instance = shot_scene.instance()
+		shot_instance.position = position + $CannonPosition.position
+		get_parent().add_child(shot_instance)
+		can_shoot = false
+		$Timer_Reload.start()
+
+func _on_Timer_Reload_timeout():
+	can_shoot = true
