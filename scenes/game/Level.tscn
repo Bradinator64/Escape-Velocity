@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/game/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/game/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/game/Asteroid.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/game/Level.gd" type="Script" id=4]
 [ext_resource path="res://scenes/game/HUD.tscn" type="PackedScene" id=5]
 
@@ -15,12 +14,16 @@ script = ExtResource( 4 )
 "player",
 ] instance=ExtResource( 2 )]
 
-[node name="Asteroid" parent="." groups=[
-"debris",
-] instance=ExtResource( 3 )]
-
 [node name="HUD" parent="." instance=ExtResource( 5 )]
 
 [node name="ScoreTimer" type="Timer" parent="."]
+
+[node name="AsteroidTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="StartTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
 [connection signal="area_entered" from="Player" to="." method="_on_Player_area_entered"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
+[connection signal="timeout" from="AsteroidTimer" to="." method="_on_AsteroidTimer_timeout"]
