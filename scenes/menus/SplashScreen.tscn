@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/menus/SplashScreen.gd" type="Script" id=1]
-[ext_resource path="res://assets/menus/sc110420-1.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/menus/MenuMusic.wav" type="AudioStream" id=2]
 [ext_resource path="res://assets/menus/Wildcards.png" type="Texture" id=3]
 [ext_resource path="res://assets/menus/Theme.png" type="Texture" id=4]
 

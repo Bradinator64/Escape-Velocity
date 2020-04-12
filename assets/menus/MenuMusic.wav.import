@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sc110420-1.wav-f1e911973bd85be08591bd019c0ed522.sample"
+path="res://.import/MenuMusic.wav-5f8833d3b37390c531bcde6e05a08f58.sample"
 
 [deps]
 
-source_file="res://assets/menus/sc110420-1.wav"
-dest_files=[ "res://.import/sc110420-1.wav-f1e911973bd85be08591bd019c0ed522.sample" ]
+source_file="res://assets/menus/MenuMusic.wav"
+dest_files=[ "res://.import/MenuMusic.wav-5f8833d3b37390c531bcde6e05a08f58.sample" ]
 
 [params]
 
