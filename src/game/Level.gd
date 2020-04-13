@@ -25,7 +25,7 @@ func _process(delta):
 	if player_health <= 0:
 		if score > Global.high_score:
 			Global.high_score = score
-		save()
+		Global._save()
 		get_tree().change_scene("res://scenes/menus/MainMenu.tscn")
 
 
@@ -37,15 +37,6 @@ func spawn_asteroid():
 	asteroid_instance.position = pos
 	asteroid_instance.add_to_group("debris")
 	add_child(asteroid_instance)
-
-func save():
-	var data = ""
-	data += "High Score: " + str(Global.high_score)
-	var save_file = File.new()
-	save_file.open("res://EscapeVelocityHighScore.txt", File.WRITE)
-	save_file.store_line(data)
-	save_file.close()
-	print("High Score Saved!")
 
 func _on_ScoreTimer_timeout():
 	score += score_mod

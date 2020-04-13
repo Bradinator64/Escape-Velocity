@@ -61,9 +61,9 @@ margin_right = 76.0
 margin_bottom = 14.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_left = 333.0
+margin_left = 334.0
 margin_top = 414.0
-margin_right = 490.0
+margin_right = 489.0
 margin_bottom = 434.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
@@ -76,9 +76,9 @@ text = "New Game"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 margin_left = 92.0
-margin_right = 157.0
+margin_right = 155.0
 margin_bottom = 20.0
-text = "Controls"
+text = "Options"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 margin_left = 359.0
