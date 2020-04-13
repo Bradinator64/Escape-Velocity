@@ -16,6 +16,8 @@ func _ready():
 	$Player.position = $StartPosition.position
 	screen_size = OS.get_real_window_size()
 	player_health = $Player.max_health
+	yield(get_tree().create_timer(1), "timeout")
+	get_node("/root/MusicScene/GameMusic").play()
 	$ScoreTimer.start()
 	$AsteroidTimer.start()
 	$HUD/MainHBoxContainer/HealthHBoxContainer/Health.text = str(player_health)
@@ -23,6 +25,7 @@ func _ready():
 	
 func _process(delta):
 	if player_health <= 0:
+		get_node("/root/MusicScene/GameMusic").stop()
 		if score > Global.high_score:
 			Global.high_score = score
 		Global._save()

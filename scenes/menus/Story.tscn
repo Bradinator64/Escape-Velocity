@@ -1,8 +1,11 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/menus/Story.gd" type="Script" id=1]
 
 [node name="Story" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -37,9 +40,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/CenterContainer"]
-margin_left = 60.0
+margin_left = 61.0
 margin_top = 52.0
-margin_right = 862.0
+margin_right = 863.0
 margin_bottom = 423.0
 rect_min_size = Vector2( 802, 354 )
 text = "Date: September 14th 2972
@@ -66,7 +69,7 @@ in their mission.  Then humanity is lost."
 align = 1
 autowrap = true
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="MainMenuButton" type="Button" parent="MarginContainer/VBoxContainer"]
 margin_left = 389.0
 margin_top = 480.0
 margin_right = 535.0
@@ -74,3 +77,4 @@ margin_bottom = 500.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Return to Main Menu"
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

@@ -5,7 +5,8 @@ func _ready():
 	#Play SplashScreenAudio
 	#Play SplashScreenAnimation
 	Global._load()
-	$SplashScreenAudio.play()
+	yield(get_tree().create_timer(1), "timeout")
+	get_node("/root/MusicScene/MenuMusic").play()
 
 func _process(delta):
 	if Input.is_action_pressed("ui_accept"):

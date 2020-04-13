@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://src/menus/RebindMenu.gd" type="Script" id=1]
+[ext_resource path="res://src/menus/ConfirmationDialog.gd" type="Script" id=2]
 
 [node name="RebindMenu" type="Control"]
 anchor_right = 1.0
@@ -150,6 +151,28 @@ margin_right = 146.0
 margin_bottom = 180.0
 text = "Reset High Score"
 
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="BackgroundPlaceholder/MarginContainer/ScrollContainer/VBoxContainer/ResetHighScoreButton"]
+margin_left = -20.4056
+margin_top = -47.6131
+margin_right = 179.594
+margin_bottom = 22.3869
+size_flags_horizontal = 4
+size_flags_vertical = 4
+window_title = ""
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="BackgroundPlaceholder/MarginContainer/ScrollContainer/VBoxContainer/ResetHighScoreButton/ConfirmationDialog"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Confirm High Score Reset"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="MainMenuButton" type="Button" parent="BackgroundPlaceholder/MarginContainer/ScrollContainer/VBoxContainer"]
 margin_top = 200.0
 margin_right = 146.0
@@ -160,5 +183,6 @@ text = "Return to Main Menu"
 [connection signal="button_down" from="BackgroundPlaceholder/MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/HBox_player_left/Button" to="." method="b_change_key_player_left"]
 [connection signal="button_down" from="BackgroundPlaceholder/MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/HBox_player_right/Button" to="." method="b_change_key_player_right"]
 [connection signal="button_down" from="BackgroundPlaceholder/MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/HBox_player_fire/Button" to="." method="b_change_key_player_fire"]
-[connection signal="pressed" from="BackgroundPlaceholder/MarginContainer/ScrollContainer/VBoxContainer/ResetHighScoreButton" to="." method="_on_ResetHighScoreButton_pressed"]
+[connection signal="pressed" from="BackgroundPlaceholder/MarginContainer/ScrollContainer/VBoxContainer/ResetHighScoreButton" to="BackgroundPlaceholder/MarginContainer/ScrollContainer/VBoxContainer/ResetHighScoreButton/ConfirmationDialog" method="_on_ResetHighScoreButton_pressed"]
+[connection signal="confirmed" from="BackgroundPlaceholder/MarginContainer/ScrollContainer/VBoxContainer/ResetHighScoreButton/ConfirmationDialog" to="." method="_on_ConfirmationDialog_confirmed"]
 [connection signal="pressed" from="BackgroundPlaceholder/MarginContainer/ScrollContainer/VBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

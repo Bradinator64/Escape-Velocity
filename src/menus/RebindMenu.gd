@@ -66,6 +66,7 @@ func b_change_key_player_fire():
 func _on_MainMenuButton_pressed():
 	get_tree().change_scene("res://scenes/menus/MainMenu.tscn")
 
-func _on_ResetHighScoreButton_pressed():
+
+func _on_ConfirmationDialog_confirmed():
 	Global.high_score = 0
 	Global._save()
