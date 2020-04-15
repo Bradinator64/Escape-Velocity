@@ -22,3 +22,7 @@ func _on_NewGameButton_pressed():
 
 func _on_StoryButton_pressed():
 	get_tree().change_scene("res://scenes/menus/Story.tscn")
+
+
+func _on_CreditsButton_pressed():
+	get_tree().change_scene("res://scenes/menus/Credits.tscn")
