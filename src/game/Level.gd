@@ -1,5 +1,7 @@
 extends Node
 
+const ASTEROID_SPAWN_POS_X : float = 360.0
+const ASTEROID_SPAWN_RANGE_Y : float = 180.0
 
 var score
 var player_health
@@ -35,8 +37,8 @@ func _process(delta):
 func spawn_asteroid():
 	var asteroid_instance = asteroid.instance()
 	var pos = Vector2()
-	pos.x = screen_size.x
-	pos.y = rand_range(0, screen_size.y)
+	pos.x = ASTEROID_SPAWN_POS_X
+	pos.y = rand_range(0, ASTEROID_SPAWN_RANGE_Y)
 	asteroid_instance.position = pos
 	asteroid_instance.add_to_group("debris")
 	add_child(asteroid_instance)

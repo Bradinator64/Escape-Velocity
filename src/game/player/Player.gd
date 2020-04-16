@@ -1,16 +1,12 @@
 extends Area2D
 
-export var speed = 400
-var screen_size
+const MOVEMENT_LIMITS : Vector2 = Vector2(320, 180)
+
+export var speed = 150
 var can_shoot = true
 export var max_health = 100
 
 var shot_scene = preload("res://scenes/game/Shot.tscn")
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	screen_size = get_viewport_rect().size
-	
 	
 func _process(delta):
 	var velocity = Vector2()
@@ -29,8 +25,8 @@ func _process(delta):
 		#$AnimatedSprite.stop()
 	
 	position += velocity * delta
-	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, screen_size.y)
+	position.x = clamp(position.x, 0, MOVEMENT_LIMITS.x)
+	position.y = clamp(position.y, 0, MOVEMENT_LIMITS.y)
 	
 	#if velocity.x != 0:
 		#if velocity.x >= 0:
@@ -40,7 +36,7 @@ func _process(delta):
 	#if velocity.y != 0:
 		#if velocity.y < 0:
 			#$AnimatedSprite.animation = "up"
-		#else:
+		#else: 
 			#$AnimatedSprite.animation = "down"
 			
 	if Input.is_action_pressed("player_fire") and can_shoot:
