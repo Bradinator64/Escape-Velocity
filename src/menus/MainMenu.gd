@@ -2,7 +2,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$MarginContainer/VBoxContainer/HighScore/HighScore.text = str(Global.high_score)
+	$MarginContainer/CenterContainer/VBoxContainer/HighScore/HighScore.text = str(Global.high_score)
 	if not get_node("/root/MusicScene/MenuMusic").is_playing():
 		yield(get_tree().create_timer(1), "timeout")
 		get_node("/root/MusicScene/MenuMusic").play()

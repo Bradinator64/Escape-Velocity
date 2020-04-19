@@ -24,26 +24,26 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 margin_left = 50.0
 margin_top = 50.0
-margin_right = 974.0
-margin_bottom = 550.0
+margin_right = 1230.0
+margin_bottom = 670.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_right = 924.0
-margin_bottom = 476.0
+margin_right = 1180.0
+margin_bottom = 596.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
-margin_right = 924.0
-margin_bottom = 476.0
+margin_right = 1180.0
+margin_bottom = 596.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/CenterContainer"]
-margin_left = 61.0
-margin_top = 52.0
-margin_right = 863.0
-margin_bottom = 423.0
+margin_left = 189.0
+margin_top = 112.0
+margin_right = 991.0
+margin_bottom = 483.0
 rect_min_size = Vector2( 802, 354 )
 text = "Date: September 14th 2972
 
@@ -55,7 +55,8 @@ We ravaged the planet and now our resources dwindle.  We will be unable to susta
 
 The situation is so dire that even the fractured nations of Earth have deemed it severe enough to co-operate with each
 other.  They call it the Ark program.  A last chance for humanity to survive.  The wars that prevented our expansion into space
-have finally ceased and as we speak brave pilots, codenamed Ark-onoughts and lead by Sir J. Son OBE, are being trained to venture out into the unknown void in search of somewhere, anywhere that we might be able to call home.
+have finally ceased and as we speak brave pilots, are being trained to venture out into the unknown void in search of
+somewhere, anywhere that we might be able to call home.
 
 They will be using the latest single-manned FTL ships we have available, and while they are fast and durable, I fear for the
 delicacy of their sensor systems.  Although we were able to make them sensitive enough to scan potential planets as they fly
@@ -69,10 +70,10 @@ align = 1
 autowrap = true
 
 [node name="MainMenuButton" type="Button" parent="MarginContainer/VBoxContainer"]
-margin_left = 389.0
-margin_top = 480.0
-margin_right = 535.0
-margin_bottom = 500.0
+margin_left = 517.0
+margin_top = 600.0
+margin_right = 663.0
+margin_bottom = 620.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Return to Main Menu"

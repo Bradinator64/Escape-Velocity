@@ -1,20 +1,50 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/player_shot.png" type="Texture" id=1]
 [ext_resource path="res://src/game/player/Shot.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/pixel.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5.85545, 5.8653 )
+[sub_resource type="CircleShape2D" id=1]
+radius = 4.0
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.651852, 1 )
+colors = PoolColorArray( 0.266434, 0.584599, 0.897461, 1, 0.146542, 0.363654, 0.577148, 1, 0.0705882, 0.305882, 0.537255, 0 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+emission_shape = 1
+emission_sphere_radius = 2.0
+flag_disable_z = true
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 200.0
+initial_velocity_random = 0.9
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color_ramp = SubResource( 3 )
 
 [node name="Shot" type="Area2D" groups=[
 "shot",
 ]]
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 2 )
+speed = 250
 
 [node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 1, 0, 0.960784, 1 )
-scale = Vector2( 0.2, 0.2 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
+hframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+z_index = -5
+amount = 15
+lifetime = 2.0
+local_coords = false
+process_material = SubResource( 4 )
+texture = ExtResource( 3 )
