@@ -19,7 +19,7 @@ player_health_loss = 1
 [node name="ScoreTimer" type="Timer" parent="."]
 
 [node name="AsteroidTimer" type="Timer" parent="."]
-wait_time = 0.1
+wait_time = 0.2
 
 [node name="StartTimer" type="Timer" parent="."]
 one_shot = true

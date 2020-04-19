@@ -26,6 +26,7 @@ func _ready():
 	
 	
 func _process(delta):
+	$HUD/MainHBoxContainer/MagHBoxContainer/Mag.text = str($Player.magazine)
 	if player_health <= 0:
 		get_node("/root/MusicScene/GameMusic").stop()
 		if score > Global.high_score:

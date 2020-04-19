@@ -13,7 +13,7 @@ __meta__ = {
 }
 
 [node name="HealthHBoxContainer" type="HBoxContainer" parent="MainHBoxContainer"]
-margin_right = 638.0
+margin_right = 424.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
 
@@ -35,8 +35,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="MagHBoxContainer" type="HBoxContainer" parent="MainHBoxContainer"]
+margin_left = 428.0
+margin_right = 852.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MagLabel" type="Label" parent="MainHBoxContainer/MagHBoxContainer"]
+margin_left = 352.0
+margin_right = 420.0
+margin_bottom = 14.0
+size_flags_horizontal = 8
+text = "Magazine: "
+
+[node name="Mag" type="Label" parent="MainHBoxContainer/MagHBoxContainer"]
+margin_left = 424.0
+margin_right = 424.0
+margin_bottom = 14.0
+size_flags_horizontal = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ScoreHBoxContainer" type="HBoxContainer" parent="MainHBoxContainer"]
-margin_left = 642.0
+margin_left = 856.0
 margin_right = 1280.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
@@ -46,15 +72,15 @@ __meta__ = {
 }
 
 [node name="ScoreLabel" type="Label" parent="MainHBoxContainer/ScoreHBoxContainer"]
-margin_left = 591.0
-margin_right = 634.0
+margin_left = 377.0
+margin_right = 420.0
 margin_bottom = 14.0
 size_flags_horizontal = 8
 text = "Score: "
 
 [node name="Score" type="Label" parent="MainHBoxContainer/ScoreHBoxContainer"]
-margin_left = 638.0
-margin_right = 638.0
+margin_left = 424.0
+margin_right = 424.0
 margin_bottom = 14.0
 size_flags_horizontal = 9
 __meta__ = {

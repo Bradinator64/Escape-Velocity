@@ -17,7 +17,7 @@ max_health = 10
 [node name="Timer_Reload" type="Timer" parent="." groups=[
 "player",
 ]]
-wait_time = 0.2
+wait_time = 0.5
 one_shot = true
 
 [node name="CannonPosition" type="Position2D" parent="."]
@@ -28,4 +28,9 @@ texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="Timer_Magazine_Reload" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
 [connection signal="timeout" from="Timer_Reload" to="." method="_on_Timer_Reload_timeout"]
+[connection signal="timeout" from="Timer_Magazine_Reload" to="." method="_on_Timer_Magazine_Reload_timeout"]
