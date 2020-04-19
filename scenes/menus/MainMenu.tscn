@@ -64,9 +64,9 @@ margin_right = 76.0
 margin_bottom = 14.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
-margin_left = 468.0
+margin_left = 439.0
 margin_top = 92.0
-margin_right = 623.0
+margin_right = 652.0
 margin_bottom = 112.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
@@ -79,9 +79,9 @@ text = "New Game"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
 margin_left = 92.0
-margin_right = 155.0
+margin_right = 213.0
 margin_bottom = 20.0
-text = "Options"
+text = "Options/Controls"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
 margin_left = 493.0
@@ -114,7 +114,7 @@ text = "Quit Game"
 margin_top = 164.0
 margin_right = 1092.0
 margin_bottom = 178.0
-text = "(c) Will Bradley and Icky 2020"
+text = "(c) Will Bradley 2020 | GNU GPLv3"
 align = 1
 
 [node name="MainTheme" type="AudioStreamPlayer" parent="."]
