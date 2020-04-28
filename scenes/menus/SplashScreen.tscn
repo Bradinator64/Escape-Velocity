@@ -75,5 +75,5 @@ custom_constants/separation = 0
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer"]
 margin_right = 1180.0
 margin_bottom = 14.0
-text = "Copyright Will Bradley 2020"
+text = "Copyright Will Bradley and Icky 2020"
 align = 1

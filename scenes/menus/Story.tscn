@@ -41,9 +41,9 @@ size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/CenterContainer"]
 margin_left = 189.0
-margin_top = 104.0
+margin_top = 95.0
 margin_right = 991.0
-margin_bottom = 492.0
+margin_bottom = 500.0
 rect_min_size = Vector2( 802, 354 )
 text = "Date: September 14th 2972
 
@@ -58,7 +58,7 @@ other.  They call it the Ark program.  A last chance for humanity to survive.  T
 have finally ceased and as we speak brave pilots, codenamed Ark-onauts are being trained to venture out into the unknown void in search of somewhere, anywhere that we might be able to call home.  They are to be lead by Commander J. Son, who has long been the largest advocate of humanity's expansion into space.
 
 They will be using the latest single-manned FTL ships we have available, and while they are fast and durable, I fear for the
-delicacy of their sensor systems.  Although we were able to make them sensitive enough to scan potential planets as they fly past, they must remain outside of the ship's own shields to operate, making them vulnerable to damage from the detritus of space.
+delicacy of their sensor systems.  Although we were able to make them sensitive enough to scan potential planets as they fly past, they must remain outside of the ship's own shields to operate, making them vulnerable to damage from the detritus of space.  If they lose all their sensors, there is nothing they can do except to return home with what information they've managed to gather.
 
 To this end the Ark Program deemed it necessary to arm the ships with the latest PB-21 Plasma Cannons in the hope they
 will be strong enough for the pilots to effectively protect their sensors.  However for the record I question their fire rate and magazine load, the Ark-onauts should not rely on them too heavily and look to their piloting skills to avoid any obstacles they find if they can.  I pray it will be enough.  If it is not, if the pilots fail in their mission.  Then humanity is lost."
